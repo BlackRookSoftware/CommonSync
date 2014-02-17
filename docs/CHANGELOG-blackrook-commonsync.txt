@@ -1,0 +1,36 @@
+Commons Sync (C) Black Rook Software, All rights reserved.
+
+Changed in 2.4.0
+================
+
+- Added: Task.getProgress(), Task.getProgressMax().
+- Added: ThreadPool.getCount().
+- Added package "message" that contains classes to aid in message passing
+  between components.
+- Changed: Source indentation style.
+
+Changed in 2.3.0
+================
+
+- Changed: The refactoring to use the list package from the Commons project 
+  (2.8.0).
+
+Changed in 2.2.1
+================
+
+- Added: Added license text to some files that didn't have it.
+
+Changed in 2.2.0
+================
+
+- Added: Task.spawn(boolean) and Task.spawn(Task, boolean) for creating daemon
+  tasks.
+- Added: Task.waitFor(), which will make the current thread wait until the 
+  task completes, either with an exception, cancellation, or successful
+  finish.
+
+Changed in 2.1.0
+================
+
+- Added: Task.
+  
