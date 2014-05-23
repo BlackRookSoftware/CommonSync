@@ -5,28 +5,32 @@
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
  ******************************************************************************/
-package com.blackrook.sync;
+package com.blackrook.sync.pool;
 
 /**
- * Thread pool event for when a runnable throws an uncaught exception. Fired from ThreadPools.
+ * Adapter class for the ThreadPoolListener.
  * @author Matthew Tropiano
  */
-public class ThreadPoolExceptionEvent<T extends Runnable> extends ThreadPoolEvent<T>
+public class ThreadPoolAdapter<T extends Runnable> implements ThreadPoolListener<T>
 {
-	/** Reference to the exception that was thrown. */
-	private Exception exceptionRef;
-	
-	public ThreadPoolExceptionEvent(T r, Exception e)
+	@Override
+	public void taskEnqueued(ThreadPoolEvent<T> event) 
 	{
-		super(r);
-		exceptionRef = e;
 	}
 
-	public final Exception getException()
+	@Override
+	public void taskError(ThreadPoolExceptionEvent<T> event)
 	{
-		return exceptionRef;
 	}
 
+	@Override
+	public void taskFinished(ThreadPoolEvent<T> event)
+	{
+	}
 
-	
+	@Override
+	public void taskStarted(ThreadPoolEvent<T> event)
+	{
+	}
+
 }

@@ -5,26 +5,5 @@
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
  ******************************************************************************/
-package com.blackrook.sync;
-
-/**
- * Thread pool event. Fired from ThreadPools.
- * @author Matthew Tropiano
- */
-public class ThreadPoolEvent<T extends Runnable>
-{
-	/** Reference to the runnable in which this event happened. */
-	private T runRef;
-
-	public ThreadPoolEvent(T r)
-	{
-		runRef = r;
-	}
-
-	public final T getRunnable()
-	{
-		return runRef;
-	}
-
-	
-}
+/** Contains a set of classes for abstract message broadcasting. */
+package com.blackrook.sync.broadcaster;

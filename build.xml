@@ -22,8 +22,10 @@
 	<property name="project.javadoc.title" value="Black Rook Common Sync" />
 	<property name="project.classpath" value="${common.lib}" />
 	<property name="project.javadoc.packages" value="
-    	com.blackrook.sync,
+		com.blackrook.sync,
+		com.blackrook.sync.broadcaster,
 		com.blackrook.sync.message,
+		com.blackrook.sync.pool
 		"
 	/>
 

@@ -1,5 +1,13 @@
 Commons Sync (C) Black Rook Software, All rights reserved.
 
+Slated for 2.5.0
+================
+
+- Refactor: ThreadPool* classes moved to new package "com.blackrook.sync.pool".
+- Added: WorkPool for abstract work pooling - enqueues objects rather than 
+  runnables.
+- Added: Broadcaster - general object/message broadcasting.
+
 Changed in 2.4.0
 ================
 

@@ -5,7 +5,7 @@
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
  ******************************************************************************/
-package com.blackrook.sync;
+package com.blackrook.sync.pool;
 
 /**
  * Listener archetype for ThreadPools.

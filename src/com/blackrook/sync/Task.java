@@ -8,6 +8,7 @@
 package com.blackrook.sync;
 
 import com.blackrook.commons.Common;
+import com.blackrook.sync.pool.ThreadPool;
 
 /**
  * A runnable task that is supposed to be executed asynchronously,
