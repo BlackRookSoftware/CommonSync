@@ -5,10 +5,16 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 
 import com.blackrook.commons.hash.Hash;
+import com.blackrook.sync.pool.WorkPool;
 
 /**
  * Broadcaster class for all sorts of message broadcasting to attached receivers.
- * All broadcasters are thread-safe.
+ * <p>
+ * All Broadcasters are thread-safe and wait for all broadcasts to complete before
+ * adds and removes can happen, due to the {@link ReentrantReadWriteLock} that this uses.
+ * The broadcast happens in the same thread that calls {@link #broadcast(Object)}, and does not offload
+ * the message object in a separate thread. Best combined with a {@link WorkPool} for broadcasting
+ * lots of messages asynchronously, with each spawned job doing the broadcast.
  * @param <M> the message type to broadcast to attached listeners.
  * @author Matthew Tropiano
  */
