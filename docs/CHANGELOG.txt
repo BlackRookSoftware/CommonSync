@@ -1,6 +1,6 @@
 Commons Sync (C) Black Rook Software, All rights reserved.
 
-Slated for 2.5.0
+Changed in 2.5.0
 ================
 
 - Refactor: ThreadPool* classes moved to new package "com.blackrook.sync.pool".
