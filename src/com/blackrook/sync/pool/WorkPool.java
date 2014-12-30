@@ -62,6 +62,7 @@ public abstract class WorkPool<R extends Object>
 	 * @param workerMax the maximum amount of threads to spawn.
 	 * @param poolListeners a list of listeners to add immediately to the pool.
 	 */
+	@SafeVarargs
 	public WorkPool(int workerMin, int workerMax, WorkPoolListener<R> ...poolListeners)
 	{
 		this(DEFAULT_POOL_NAME, DEFAULT_WORKER_PREFIX, workerMin, workerMax, DEFAULT_WORKER_TIMEOUT, false, poolListeners);
@@ -75,6 +76,7 @@ public abstract class WorkPool<R extends Object>
 	 * @param workerTimeout the periodic timeout for worker threads waiting for a task.
 	 * @param poolListeners a list of listeners to add immediately to the pool.
 	 */
+	@SafeVarargs
 	public WorkPool(int workerMin, int workerMax, int workerTimeout, WorkPoolListener<R> ...poolListeners)
 	{
 		this(DEFAULT_POOL_NAME, DEFAULT_WORKER_PREFIX, workerMin, workerMax, workerTimeout, false, poolListeners);
@@ -88,6 +90,7 @@ public abstract class WorkPool<R extends Object>
 	 * @param daemon if true, all created threads are daemon threads.
 	 * @param poolListeners a list of listeners to add immediately to the pool.
 	 */
+	@SafeVarargs
 	public WorkPool(int workerMin, int workerMax, boolean daemon, WorkPoolListener<R> ...poolListeners)
 	{
 		this(DEFAULT_POOL_NAME, DEFAULT_WORKER_PREFIX, workerMin, workerMax, DEFAULT_WORKER_TIMEOUT, daemon, poolListeners);
@@ -102,6 +105,7 @@ public abstract class WorkPool<R extends Object>
 	 * @param daemon if true, all created threads are daemon threads.
 	 * @param poolListeners a list of listeners to add immediately to the pool.
 	 */
+	@SafeVarargs
 	public WorkPool(int workerMin, int workerMax, int workerTimeout, boolean daemon, WorkPoolListener<R> ...poolListeners)
 	{
 		this(DEFAULT_POOL_NAME, DEFAULT_WORKER_PREFIX, workerMin, workerMax, workerTimeout, daemon, poolListeners);
@@ -118,6 +122,7 @@ public abstract class WorkPool<R extends Object>
 	 * @param daemon if true, all created threads are daemon threads.
 	 * @param poolListeners a list of listeners to add immediately to the pool.
 	 */
+	@SafeVarargs
 	public WorkPool(String poolName, String workerNamePrefix, int workerMin, int workerMax, int workerTimeout, boolean daemon, WorkPoolListener<R> ...poolListeners)
 	{
 		queue = new Queue<R>();

@@ -71,7 +71,6 @@ public class Broadcaster<M extends Object>
 	 * Adds a receiver to this broadcaster.
 	 * If this receiver was added, this returns false.
 	 * @param receiver the receiver to add.
-	 * @param groupIds the groups that the user belongs to.
 	 * @return true if added, false if not.
 	 */
 	public boolean addReceiver(BroadcastReceiver<M> receiver)
@@ -94,7 +93,6 @@ public class Broadcaster<M extends Object>
 
 	/**
 	 * Removes a user from this broadcaster.
-	 * @param userId the user id to remove.
 	 * @return true if removed, false if not.
 	 */
 	public boolean removeReceiver(BroadcastReceiver<M> receiver)
