@@ -85,7 +85,7 @@
         	sourcepath="${src.dir}" 
         	packagenames="${project.javadoc.packages}"
         	destdir="${docs.dir}" 
-    		source="1.7" 
+    		source="1.8" 
         	splitindex="true" 
         	use="true" 
         	version="true" 
@@ -95,13 +95,13 @@
         	nonavbar="false" 
         	notree="false"
     		>
-            <link href="http://download.oracle.com/javase/6/docs/api/"/>
+            <link href="https://docs.oracle.com/javase/8/docs/api/"/>
         </javadoc>
     </target>	
 	
 	<target name="compile" depends="init.compile" description="Compiles the project.">
 		<javac 
-			source="1.7"
+			source="1.8"
 			srcdir="${src.dir}" 
 			destdir="${bin.dir}"
             includeAntRuntime="false"
