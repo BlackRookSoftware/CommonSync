@@ -6,6 +6,7 @@ Slated for 2.5.1
 - Changed: Added annotations for various "varargs" methods to reduce potential 
   compiler warnings.
 - Fixed: Some Javadoc warnings.
+- Slight changes due to deprecation.
 
 Changed in 2.5.0
 ================

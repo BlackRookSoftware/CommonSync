@@ -21,7 +21,7 @@ public abstract class WorkPool<R extends Object>
 	public static final int DEFAULT_WORKER_TIMEOUT = 1000;
 	
 	/** Mutex for changing the available count. */
-	private Integer AVAILABLE_MUTEX = new Integer(0);
+	private Integer AVAILABLE_MUTEX = Integer.valueOf(0);
 	
 	/** Reference to itself for workers. */
 	private WorkPool<R> SELF = this;

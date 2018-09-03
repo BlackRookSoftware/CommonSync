@@ -150,6 +150,7 @@ public class ThreadPool<T extends Runnable>
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public void finalize() throws Throwable
 	{
 		interruptAll();
