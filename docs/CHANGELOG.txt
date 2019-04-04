@@ -1,12 +1,13 @@
 Commons Sync (C) Black Rook Software, All rights reserved.
 
-Slated for 2.5.1
+Changed in 2.6.0
 ================
 
 - Changed: Added annotations for various "varargs" methods to reduce potential 
   compiler warnings.
 - Fixed: Some Javadoc warnings.
 - Slight changes due to deprecation.
+- Cleaned up Common deprecation from Commons version 2.32.0.
 
 Changed in 2.5.0
 ================

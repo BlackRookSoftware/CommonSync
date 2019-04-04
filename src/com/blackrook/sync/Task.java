@@ -7,7 +7,7 @@
  ******************************************************************************/
 package com.blackrook.sync;
 
-import com.blackrook.commons.Common;
+import com.blackrook.commons.util.ThreadUtils;
 import com.blackrook.sync.pool.ThreadPool;
 
 /**
@@ -249,7 +249,7 @@ public abstract class Task implements Runnable
 	 */
 	public void waitFor()
 	{
-		while (!isDone()) Common.sleep(1);
+		while (!isDone()) ThreadUtils.sleep(1);
 	}
 	
 	/**
